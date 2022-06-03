@@ -7,7 +7,7 @@ using System.Data.Entity;
 
 namespace QualifyMeProject.DomainModels
 {
-    public class QualifyMeDatabaseDbContext
+    public class QualifyMeDatabaseDbContext : DbContext
     {
         public DbSet<User> Users { get; set; }
     }
