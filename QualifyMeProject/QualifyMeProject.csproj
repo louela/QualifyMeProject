@@ -134,6 +134,12 @@
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QualifyMeProject.DomainModels\QualifyMeProject.DomainModels.csproj">
+      <Project>{7bb08cc4-dff9-4502-bd34-ff2eb6154027}</Project>
+      <Name>QualifyMeProject.DomainModels</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

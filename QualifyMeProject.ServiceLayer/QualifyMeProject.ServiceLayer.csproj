@@ -44,5 +44,11 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QualifyMeProject.DomainModels\QualifyMeProject.DomainModels.csproj">
+      <Project>{7bb08cc4-dff9-4502-bd34-ff2eb6154027}</Project>
+      <Name>QualifyMeProject.DomainModels</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
