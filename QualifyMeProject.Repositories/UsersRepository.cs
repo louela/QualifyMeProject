@@ -7,12 +7,14 @@ using QualifyMeProject.DomainModels;
 
 namespace QualifyMeProject.Repositories
 {
-    public interface IQualifyMeRepository
+    public interface IUsersRepository
     {
         void InsertUser(User u);
         void UpdateUserDetails(User u);
         void UpdateUserPassword(User u);
+
         void DeleteUser(int uid);
+        List<User> GetUsers();
         int GetLatestUserID();
     }
 
