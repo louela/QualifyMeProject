@@ -14,7 +14,7 @@ namespace QualifyMeProject.ViewModels
 
         [Required]
         [RegularExpression(@"^[a-zA-Z ]*$")]
-        public int UserName { get; set; }
+        public int FullName { get; set; }
 
         [Required]
         [RegularExpression(@"(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})")]
