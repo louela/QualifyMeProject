@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QualifyMeProject.DomainModels
 {
-    public class User
+    public class User 
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
