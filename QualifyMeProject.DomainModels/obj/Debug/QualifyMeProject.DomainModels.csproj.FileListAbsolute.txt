@@ -10,3 +10,15 @@ C:\Users\II\Documents\mvc\CAPSTONE\QualifyMeProject\QualifyMeProject.DomainModel
 C:\Users\II\Documents\mvc\CAPSTONE\QualifyMeProject\QualifyMeProject.DomainModels\obj\Debug\QualifyMeProject.DomainModels.csproj.CopyComplete
 C:\Users\II\Documents\mvc\CAPSTONE\QualifyMeProject\QualifyMeProject.DomainModels\obj\Debug\QualifyMeProject.DomainModels.dll
 C:\Users\II\Documents\mvc\CAPSTONE\QualifyMeProject\QualifyMeProject.DomainModels\obj\Debug\QualifyMeProject.DomainModels.pdb
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.DomainModels\bin\Debug\QualifyMeProject.DomainModels.dll.config
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.DomainModels\bin\Debug\QualifyMeProject.DomainModels.dll
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.DomainModels\bin\Debug\QualifyMeProject.DomainModels.pdb
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.DomainModels\bin\Debug\EntityFramework.dll
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.DomainModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.DomainModels\bin\Debug\EntityFramework.xml
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.DomainModels\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.DomainModels\obj\Debug\QualifyMeProject.DomainModels.csproj.AssemblyReference.cache
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.DomainModels\obj\Debug\QualifyMeProject.DomainModels.csproj.CoreCompileInputs.cache
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.DomainModels\obj\Debug\QualifyMeProject.DomainModels.csproj.CopyComplete
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.DomainModels\obj\Debug\QualifyMeProject.DomainModels.dll
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.DomainModels\obj\Debug\QualifyMeProject.DomainModels.pdb
