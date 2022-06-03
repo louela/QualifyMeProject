@@ -139,6 +139,14 @@
       <Project>{7bb08cc4-dff9-4502-bd34-ff2eb6154027}</Project>
       <Name>QualifyMeProject.DomainModels</Name>
     </ProjectReference>
+    <ProjectReference Include="..\QualifyMeProject.ServiceLayer\QualifyMeProject.ServiceLayer.csproj">
+      <Project>{770a50d3-db64-4050-a871-1a4ba27edc58}</Project>
+      <Name>QualifyMeProject.ServiceLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QualifyMeProject.ViewModels\QualifyMeProject.ViewModels.csproj">
+      <Project>{fe236115-c44d-4e06-8c2b-169306f22a8d}</Project>
+      <Name>QualifyMeProject.ViewModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

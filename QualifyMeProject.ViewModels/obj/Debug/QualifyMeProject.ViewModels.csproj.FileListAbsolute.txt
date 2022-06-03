@@ -1,0 +1,12 @@
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.ViewModels\bin\Debug\QualifyMeProject.ViewModels.dll.config
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.ViewModels\bin\Debug\QualifyMeProject.ViewModels.dll
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.ViewModels\bin\Debug\QualifyMeProject.ViewModels.pdb
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.ViewModels\bin\Debug\EntityFramework.dll
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.ViewModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.ViewModels\bin\Debug\EntityFramework.xml
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.ViewModels\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.ViewModels\obj\Debug\QualifyMeProject.ViewModels.csproj.AssemblyReference.cache
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.ViewModels\obj\Debug\QualifyMeProject.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.ViewModels\obj\Debug\QualifyMeProject.ViewModels.csproj.CopyComplete
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.ViewModels\obj\Debug\QualifyMeProject.ViewModels.dll
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.ViewModels\obj\Debug\QualifyMeProject.ViewModels.pdb
