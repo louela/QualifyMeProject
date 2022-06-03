@@ -38,7 +38,7 @@ namespace QualifyMeProject.Repositories
             User us = db.Users.Where(temp => temp.UserID == u.UserID).FirstOrDefault();
             if (us != null)
             {
-                us.UserName = u.UserName;
+                us.Name = u.Name;
                 us.Mobile = u.Mobile;
                 db.SaveChanges();
 
@@ -67,7 +67,7 @@ namespace QualifyMeProject.Repositories
         }
         public List<User> GetUsers()
         {
-            List<User> us = db.Users.Where(temp => temp.IsAdmin == false).OrderBy(temp => temp.UserName).ToList();
+            List<User> us = db.Users.Where(temp => temp.IsAdmin == false).OrderBy(temp => temp.Name).ToList();
             return us;
         }
         public int GetLatestUserID()
