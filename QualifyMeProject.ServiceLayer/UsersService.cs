@@ -17,7 +17,8 @@ namespace QualifyMeProject.ServiceLayer
 
         void DeleteUser(int uid);
         List<UserViewModel> GetUsers();
-     
+        UserViewModel GetUsersByEmailAndPassword(string Email, string Password);
+
     }
 
     public class UsersService : IUsersService
@@ -55,6 +56,19 @@ namespace QualifyMeProject.ServiceLayer
             List<UserViewModel> uvm = mapper.Map<List<User>, List<UserViewModel>>(u);
             return uvm;
         }
+        public UserViewModel GetUsersByEmailAndPassword(string Email, string Password)
+        {
+            User u = ur.GetUsersByEmailAndPassword(Email, SHA256HashGenerator.GenerateHash(Password)).FirstOrDefault();
+            UserViewModel uvm = null;
+            if (u != null)
+            {
+                var config = new MapperConfiguration(cfg => { cfg.CreateMap<User, UserViewModel>(); cfg.IgnoreUnmapped(); });
+                IMapper mapper = config.CreateMapper();
+                uvm = mapper.Map<User, UserViewModel>(u);
+            }
+            return uvm;
+        }
+
     }
 
 }
