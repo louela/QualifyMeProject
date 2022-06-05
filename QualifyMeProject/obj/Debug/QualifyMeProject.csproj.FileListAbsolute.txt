@@ -99,3 +99,8 @@ C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject\obj\Debug\QualifyM
 C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject\obj\Debug\QualifyMeProject.csproj.CopyComplete
 C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject\obj\Debug\QualifyMeProject.dll
 C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject\obj\Debug\QualifyMeProject.pdb
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject\bin\Antlr3.Runtime.dll
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject\bin\System.Web.Optimization.dll
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject\bin\WebGrease.dll
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject\bin\Antlr3.Runtime.pdb
+C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject\bin\System.Web.Optimization.xml
