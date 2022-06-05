@@ -10,7 +10,7 @@ namespace QualifyMeProject.ViewModels
     public class RegisterViewModel
     {   
         [Required]
-        public int ID { get; set; }
+        public string ID { get; set; }
 
         [Required]
         [RegularExpression(@"^[a-zA-Z ]*$")]

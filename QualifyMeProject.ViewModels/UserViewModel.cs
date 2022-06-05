@@ -15,6 +15,6 @@ namespace QualifyMeProject.ViewModels
         public string Password { get; set; }
         public string Mobile { get; set; }
         public bool IsAdmin { get; set; }
-        public bool IsCompany { get; set; }
+     
     }
 }

@@ -20,7 +20,7 @@ namespace QualifyMeProject.Repositories
 
     public class UsersRepository : IUsersRepository
     {
-        private QualifyMeDatabaseDbContext db;
+        QualifyMeDatabaseDbContext db;
 
         public UsersRepository()
         {

@@ -9,72 +9,70 @@
             @Html.AntiForgeryToken()
             <div class="form-row">
                 <div class="form-group col-sm-6">
-                    <label for="ID"> ID </label>
-                    <input type="text" class="form-control" id="ID" placeholder="ID" name="ID" required="required" pattern="^[123]\d{9}$" />
+                    <label for="txtID">ID</label>
+                    <input type="text" class="form-control" id="txtID" placeholder="Enter ID" name="ID" required="required" pattern="^[123]\d{9}$" />
                     <div class="valid-feedback">
-                        Looks good!
+                        Looks Good!
                     </div>
                     <div class="invalid-feedback">
-                        Please enter name [numbers only].
-                    </div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-sm-6">
-                    <label for="txtName"> Name</label>
-                    <input type="text" class="form-control" id="txtName" placeholder="Name" name="Name" required="required" pattern="^[a-zA-Z ]*$" autofocus="autofocus" />
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                        Please enter name [alphabets only].
+                        Please Enter your ID Number.
                     </div>
                 </div>
             </div>
 
-
             <div class="form-row">
                 <div class="form-group col-sm-6">
+                    <label for="txtName">Name</label>
+                    <input type="text" class="form-control" id="txtName" placeholder="Enter Name" name="Name" required="required" pattern="^[a-zA-Z ]*$" autofocus="autofocus" />
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please Enter your Name.
+                    </div>
+                </div>
+                <div class="form-group col-sm-6">
+                        <label for="txtMobile">Mobile Number</label>
+                        <input type="text" class="form-control" id="txtMobile" placeholder="Enter Mobile" name="Mobile" required="required" pattern="^[789]\d{9}$"  />
+                        <div class="valid-feedback">
+                            Looks Good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please Enter your Mobile Number.
+                        </div>
+                    </div>
+                </div>
+
+            <div class="form-row">
+                <div class="form-group col-sm-12">
                     <label for="txtEmail">Email</label>
-                    <input type="email" class="form-control" id="txtEmail" placeholder="Email" name="Email" required="required" />
+                    <input type="email" class="form-control" id="txtEmail" placeholder="Enter Email" name="Email" required="required" />
                     <div class="valid-feedback">
-                        Looks good!
+                        Looks Good!
                     </div>
                     <div class="invalid-feedback">
-                        Invalid email
-                    </div>
-                    <small class="email-exist text-danger"></small>
-                </div>
-
-                <div class="form-group col-sm-6">
-                    <label for="txtMobile">Mobile</label>
-                    <input type="text" class="form-control" id="txtMobile" placeholder="Mobile" name="Mobile" required="required" pattern="^[789]\d{9}$" />
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                        Invalid mobile Number.
+                        Invalid Email.
                     </div>
                 </div>
             </div>
-
+            
+            
             <div class="form-row">
                 <div class="form-group col-sm-6">
                     <label for="txtPassword">Password</label>
-                    <input type="password" class="form-control" id="txtPassword" placeholder="Password" name="Password" required="required" minlength="6" oninput="form.ConfirmPassword.pattern = escapeRegExp(this.value)" />
+                    <input type="password" class="form-control" id="txtPassword" placeholder="Enter Password" name="Password" required="required" minlength="6" oninput="form.ConfirmPassword.pattern = escapeRegExp(this.value)" />
                     <div class="valid-feedback">
-                        Looks good!
+                        Looks Good!
                     </div>
                     <div class="invalid-feedback">
                         Password must contain at least 6 characters.
                     </div>
                 </div>
-
                 <div class="form-group col-sm-6">
-                    <label for="txtPassword">Confirm Password</label>
-                    <input type="password" class="form-control" id="txtConfirmPassword" placeholder="Confirm Password" name="ConfirmPassword" required="required" />
+                    <label for="txtConfirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="txtConfirmPassword" placeholder="Confirm Password" name="ConfirmPassword" required="required"  />
                     <div class="valid-feedback">
-                        Looks good!
+                        Looks Good!
                     </div>
                     <div class="invalid-feedback">
                         Password and Confirm Password do not match.
@@ -82,40 +80,27 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="button" class="btn btn-primary">Register</button>
+
         </form>
     </div>
 </div>
 
 <script>
     $("a[href='/account/register']").attr("id", "active");
+
     $(document).on("submit", ".needs-validation", validate);
     $(".needs-validation input").blur(validate);
-    function validate(event) {
+
+    function validate(event)
+    {
         if ($(".needs-validation")[0].checkValidity() == false || $(".email-exist").text() != "") {
             event.preventDefault();
         }
         $(".needs-validation")[0].classList.add("was-validated");
     }
+
     function escapeRegExp(str) {
         return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
     }
-    $("#txtEmail").blur(function () {
-        $.ajax({
-            url: "/api/account?email=" + $("#txtEmail").val(), type: "GET", success:
-                function (response) {
-                    if (response == "Not Found") {
-                        $(".email-exist").text("");
-                        $(".email-exist").parent(".form-group").find(".valid-feedback").css("color", "#28a745");
-                    }
-                    else {
-                        $(".email-exist").text("Email already registered");
-                        $(".email-exist").parent(".form-group").find(".valid-feedback").css("color", "white");
-                    }
-                },
-            error: function () {
-                $(".email-exist").text("Error");
-            }
-        });
-    });
 </script>
