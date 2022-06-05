@@ -10,7 +10,7 @@ namespace QualifyMeProject.Controllers
 {
     public class AccountController : Controller
     {
-        private IUsersService us;
+         IUsersService us;
 
         public AccountController(IUsersService us) 
         {
@@ -30,11 +30,11 @@ namespace QualifyMeProject.Controllers
             {
                 int uid = this.us.InsertUser(rvm);
                 Session["CurrentUserID"] = uid;
+                Session["CurrentID"] = rvm.ID;
                 Session["CurrentUserName"] = rvm.Name;
                 Session["CurrentUserEmail"] = rvm.Email;
                 Session["CurrentUserPassword"] = rvm.Password;
                 Session["CurrentUserIsAdmin"] = false;
-                Session["CurrentUserIsCompany"] = false;
                 return RedirectToAction("Index", "Home");
             }
             else
