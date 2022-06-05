@@ -44,5 +44,14 @@ namespace QualifyMeProject.Controllers
             }
 
         }
+
+        public ActionResult Login()
+        {
+            LoginViewModel lvm = new LoginViewModel();
+            return View();
+        }
+
+       
+       
     }
 }
