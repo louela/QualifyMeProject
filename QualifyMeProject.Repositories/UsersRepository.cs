@@ -16,6 +16,7 @@ namespace QualifyMeProject.Repositories
         void DeleteUser(int uid);
         List<User> GetUsers();
         int GetLatestUserID();
+        List<User> GetUsersByEmailAndPassword(string email, string password);
     }
 
     public class UsersRepository : IUsersRepository
@@ -74,6 +75,11 @@ namespace QualifyMeProject.Repositories
         {
             int uid = db.Users.Select(temp => temp.UserID).Max();
             return uid;
+        }
+        public List<User> GetUsersByEmailAndPassword(string Email, string PasswordHash)
+        {
+            List<User> us = db.Users.Where(temp => temp.Email == Email && temp.PasswordHash == PasswordHash).ToList();
+            return us;
         }
     }
 }
