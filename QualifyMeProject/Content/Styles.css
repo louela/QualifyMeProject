@@ -1,2 +1,18 @@
-﻿body {
+﻿.navbar
+{
+    background-color: #ec971d;
+}
+
+#active
+{
+    color: black !important;
+}
+
+.navbar a:link, .navbar a:visted
+{
+    color:white !important;
+}
+.navbar a:hover
+{
+    color: white !important;
 }
