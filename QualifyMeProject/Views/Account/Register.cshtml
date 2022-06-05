@@ -80,7 +80,7 @@
                 </div>
             </div>
 
-            <button type="button" class="btn btn-primary">Register</button>
+            <button type="submit" class="btn btn-primary">Register</button>
 
         </form>
     </div>
@@ -91,9 +91,7 @@
 
     $(document).on("submit", ".needs-validation", validate);
     $(".needs-validation input").blur(validate);
-
-    function validate(event)
-    {
+    function validate(event) {
         if ($(".needs-validation")[0].checkValidity() == false || $(".email-exist").text() != "") {
             event.preventDefault();
         }
@@ -103,4 +101,22 @@
     function escapeRegExp(str) {
         return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
     }
+    $("#txtEmail").blur(function () {
+        $.ajax({
+            url: "/api/account?email=" + $("#txtEmail").val(), type: "GET", success:
+                function (response) {
+                    if (response == "Not Found") {
+                        $(".email-exist").text("");
+                        $(".email-exist").parent(".form-group").find(".valid-feedback").css("color", "#28a745");
+                    }
+                    else {
+                        $(".email-exist").text("Email already registered");
+                        $(".email-exist").parent(".form-group").find(".valid-feedback").css("color", "white");
+                    }
+                },
+            error: function () {
+                $(".email-exist").text("Error");
+            }
+        });
+    });
 </script>
