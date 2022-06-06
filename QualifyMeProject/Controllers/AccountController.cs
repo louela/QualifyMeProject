@@ -68,7 +68,7 @@ namespace QualifyMeProject.Controllers
 
                     if (uvm.IsAdmin)
                     {
-                        return RedirectToRoute(new { Controller = "Home", action = "Index" });
+                        return RedirectToAction("Index", "Home", new { area = "Admin" });
 
                     }
                     else
