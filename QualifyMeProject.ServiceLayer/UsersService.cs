@@ -56,6 +56,7 @@ namespace QualifyMeProject.ServiceLayer
             List<UserViewModel> uvm = mapper.Map<List<User>, List<UserViewModel>>(u);
             return uvm;
         }
+
         public UserViewModel GetUsersByEmailAndPassword(string Email, string Password)
         {
             User u = ur.GetUsersByEmailAndPassword(Email, SHA256HashGenerator.GenerateHash(Password)).FirstOrDefault();
@@ -68,6 +69,7 @@ namespace QualifyMeProject.ServiceLayer
             }
             return uvm;
         }
+
 
     }
 
