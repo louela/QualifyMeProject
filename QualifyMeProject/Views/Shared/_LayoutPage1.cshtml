@@ -48,6 +48,22 @@
                     <a class="nav-link" href="/account/register">Register</a>
                 </li>
             }
+            @if (Session["CurrentUserName"] != null)
+            {
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown">
+                        <img class="img-fluid" src="~/Images/user.png" width="20px" />
+                        @Session["CurrentUserName"]
+                    </a>
+                    <div class="dropdown-menu bg-info">
+                        <a class="dropdown-item" href="/account/logout">Logout</a>
+                        <a class="dropdown-item" href="/account/changeprofile">Change Profile</a>
+                        <a class="dropdown-item" href="/account/changepassword">Change Password</a>
+
+
+                    </div>
+                </li>
+            }
 
             
 

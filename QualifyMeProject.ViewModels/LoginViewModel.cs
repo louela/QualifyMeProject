@@ -11,9 +11,9 @@ namespace QualifyMeProject.ViewModels
     public class LoginViewModel
     {
         [Required]
-        public int Email;
+        public string Email { get; set; }
 
-        [Required]
-        public string Password;
+        [Required] 
+        public string Password { get; set; }
     }
 }

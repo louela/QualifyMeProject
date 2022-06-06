@@ -16,7 +16,7 @@ namespace QualifyMeProject.Repositories
         void DeleteUser(int uid);
         List<User> GetUsers();
         int GetLatestUserID();
-        List<User> GetUsersByEmailAndPassword(string email, string password);
+        List<User> GetUsersByEmailAndPassword(string Email, string Password);
     }
 
     public class UsersRepository : IUsersRepository
