@@ -23,3 +23,11 @@
     margin-top: 100px;
     padding: 40px;
 }
+
+.dropdown-menu a:hover {
+    color: black !important;
+}
+
+.hidden {
+    display: none;
+}

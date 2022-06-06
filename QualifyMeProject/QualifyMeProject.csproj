@@ -156,6 +156,13 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Styles.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\avatar.png" />
+    <Content Include="Images\down-color.png" />
+    <Content Include="Images\down-empty.png" />
+    <Content Include="Images\map.svg" />
+    <Content Include="Images\up-color.png" />
+    <Content Include="Images\up-empty.png" />
+    <Content Include="Images\user.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
