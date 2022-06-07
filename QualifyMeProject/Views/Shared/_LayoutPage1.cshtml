@@ -35,50 +35,48 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="/home/index">Companies</a>
                         </li>
+
                     </ul>
                     <form class="form-inline" action="/home/search">
                         <input type="search" class="form-control mr-sm-2" style="width:150px" placeholder="Search" name="str">
                         <button class="btn btn-success">Search</button>
                     </form>
+
                 </div>
-            }
-            @if (Session["CurrentUserName"] != null)
-            {
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown">
                         <img class="img-fluid" src="~/Images/user.png" width="20px" />
                         @Session["CurrentUserName"]
-                        <a class="dropdown-item" href="/account/logout">Logout</a>
-                    </a>
-                    <div class="dropdown-menu bg-info">
-                        <a class="dropdown-item" href="/account/logout">Logout</a>
-                        <a class="dropdown-item" href="/account/changeprofile">Change Profile</a>
-                        <a class="dropdown-item" href="/account/changepassword">Change Password</a>
 
-
+                    </a>                 
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/account/profile">View Profile</a>
+                        <a class="dropdown-item" href="/account/settings">Settings</a>
+                        <a class="dropdown-item" href="/account/logout">Logout</a>
                     </div>
+                   
                 </li>
             }
+            @if (Session["CurrentUserName"] == null)
+            {
 
-                @if (Session["CurrentUserName"] == null)
-                {
-                    <div>
-                        <ul>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/account/login">Login</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/account/register">Register</a>
-                            </li>
-                        </ul>
-                    </div>
-                }
+          
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/account/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/account/register">Register</a>
+                </li>
+         
 
 
 
+            }
 
 
-            </nav>
+</nav>
+       
         @RenderBody()
     </div>
 </body>
