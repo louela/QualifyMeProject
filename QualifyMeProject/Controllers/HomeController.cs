@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QualifyMeProject.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,5 +22,7 @@ namespace QualifyMeProject.Controllers
         {
             return View();
         }
+
+     
     }
 }

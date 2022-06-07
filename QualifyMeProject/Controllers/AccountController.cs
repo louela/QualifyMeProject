@@ -44,25 +44,50 @@ namespace QualifyMeProject.Controllers
             }
 
         }
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
         public ActionResult Login()
         {
             LoginViewModel lvm = new LoginViewModel();
             return View(lvm);
         }
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginViewModel lvm)
         {
+<<<<<<< HEAD
+          if(ModelState.IsValid)
+            {
+                UserViewModel uvm = this.us.GetUsersByEmailAndPassword(lvm.Email, lvm.Password);
+                if(uvm != null)
+=======
             if (ModelState.IsValid)
             {
                 UserViewModel uvm = this.us.GetUsersByEmailAndPassword(lvm.Email, lvm.Password);
                 if (uvm != null)
+>>>>>>> main
                 {
                     Session["CurrentUserID"] = uvm.UserID;
                     Session["CurrentStudentID"] = uvm.ID;
                     Session["CurrentUserName"] = uvm.Name;
                     Session["CurrentUserEmail"] = uvm.Email;
+<<<<<<< HEAD
+                    Session["CurrentUserMobile"] = uvm.Mobile;
+                    Session["CurrentUserPassword"] = uvm.Password;
+                    Session["CurrentUserIsAdmin"] = uvm.IsAdmin;
+               
+                    if( uvm.IsAdmin)
+                    {
+                        return RedirectToRoute(new { Controller = "Home",action="Index"});
+
+                    }else
+=======
                     Session["CurrentUserPassword"] = uvm.Password;
                     Session["CurrentUserIsAdmin"] = uvm.IsAdmin;
 
@@ -72,6 +97,7 @@ namespace QualifyMeProject.Controllers
 
                     }
                     else
+>>>>>>> main
                         return RedirectToAction("Index", "Home");
                 }
                 else
@@ -85,12 +111,16 @@ namespace QualifyMeProject.Controllers
                 ModelState.AddModelError("x", "Invalid Data");
                 return View(lvm);
             }
+<<<<<<< HEAD
+           
+=======
 
         }
         public ActionResult Logout()
         {
             Session.Abandon();
             return RedirectToAction("Index", "Home");
+>>>>>>> main
         }
     }
 }

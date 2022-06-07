@@ -1,0 +1,22 @@
+﻿@model QualifyMeProject.ViewModels.LoginViewModel
+
+@{ 
+    ViewBag.Title = "Login";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="max-auto login-box" style="width=600PX">
+            <h4>Login</h4>
+            <form action="/account/login" method="post" class="need-validation" novalidate="novalidate">
+              @Html.AntiForgeryToken()
+                <div class="form-group mr-3">
+                    <label for="email" class="mr-1">Email</label>
+                    <input type="email" class="form-control" id="email" name="Email" required="required" autofocus="autofocus" value="@Model.Email" />
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Invalid Email!</div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>  
