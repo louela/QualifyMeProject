@@ -10,9 +10,9 @@ namespace QualifyMeProject.Controllers
 {
     public class AccountController : Controller
     {
-         IUsersService us;
+        IUsersService us;
 
-        public AccountController(IUsersService us) 
+        public AccountController(IUsersService us)
         {
             this.us = us;
         }
@@ -63,19 +63,16 @@ namespace QualifyMeProject.Controllers
                     Session["CurrentStudentID"] = uvm.ID;
                     Session["CurrentUserName"] = uvm.Name;
                     Session["CurrentUserEmail"] = uvm.Email;
+                    Session["CurrentUserMobile"] = uvm.Mobile;
                     Session["CurrentUserPassword"] = uvm.Password;
                     Session["CurrentUserIsAdmin"] = uvm.IsAdmin;
+                    
 
                     if (uvm.IsAdmin)
                     {
                         return RedirectToAction("Index", "Home", new { area = "Admin" });
 
                     }
-                    else if (uvm.Email == "company@gmail.com")
-                    {
-                        return RedirectToAction("Index", "Home", new { area = "Company" });
-                    }
-
                     else
                         return RedirectToAction("Index", "Home");
                 }
@@ -84,6 +81,7 @@ namespace QualifyMeProject.Controllers
                     ModelState.AddModelError("x", "Invalid Email / Password");
                     return View(lvm);
                 }
+
             }
             else
             {
@@ -92,6 +90,15 @@ namespace QualifyMeProject.Controllers
             }
 
         }
+
+        public ActionResult Profile()
+        {
+            UserViewModel uvm = new UserViewModel();
+            return View();
+        }
+
+      
+
         public ActionResult Logout()
         {
             Session.Abandon();
