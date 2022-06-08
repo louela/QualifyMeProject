@@ -191,7 +191,8 @@
     <Content Include="Areas\Company\Views\web.config" />
     <Content Include="Areas\Company\Views\Shared\CompanyLayoutPage1.cshtml" />
     <Content Include="Areas\Company\Views\Home\Index.cshtml" />
-    <Content Include="Areas\Company\Views\Home\Login.cshtml" />
+    <Content Include="Areas\Company\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Company\Views\Account\Login.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -215,6 +216,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Company\CompanyAreaRegistration.cs" />
+    <Compile Include="Areas\Company\Controllers\AccountController.cs" />
     <Compile Include="Areas\Company\Controllers\HomeController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -264,9 +266,9 @@
       <Project>{770a50d3-db64-4050-a871-1a4ba27edc58}</Project>
       <Name>QualifyMeProject.ServiceLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\QualifyMeProject.ViewModels\QualifyMeProject.ViewModels.csproj">
+    <ProjectReference Include="..\QualifyMeProject.ViewModels\QualifyMeProject.ViewModel.csproj">
       <Project>{fe236115-c44d-4e06-8c2b-169306f22a8d}</Project>
-      <Name>QualifyMeProject.ViewModels</Name>
+      <Name>QualifyMeProject.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

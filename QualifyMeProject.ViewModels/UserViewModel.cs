@@ -17,4 +17,6 @@ namespace QualifyMeProject.ViewModels
         public bool IsAdmin { get; set; }
      
     }
+
+   
 }

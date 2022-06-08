@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompaniesService.cs" />
     <Compile Include="MapperExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SHA256HashGenerator.cs" />
@@ -73,9 +74,9 @@
       <Project>{3ac1cd3a-384e-434e-b603-a312b76d963a}</Project>
       <Name>QualifyMeProject.Repositories</Name>
     </ProjectReference>
-    <ProjectReference Include="..\QualifyMeProject.ViewModels\QualifyMeProject.ViewModels.csproj">
+    <ProjectReference Include="..\QualifyMeProject.ViewModels\QualifyMeProject.ViewModel.csproj">
       <Project>{fe236115-c44d-4e06-8c2b-169306f22a8d}</Project>
-      <Name>QualifyMeProject.ViewModels</Name>
+      <Name>QualifyMeProject.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

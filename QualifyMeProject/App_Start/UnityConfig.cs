@@ -18,6 +18,7 @@ namespace QualifyMeProject
             // it is NOT necessary to register your controllers
 
             container.RegisterType<IUsersService, UsersService>();
+            container.RegisterType<ICompaniesService, CompaniesService>();
             DependencyResolver.SetResolver(new Unity.Mvc5.UnityDependencyResolver(container));
             GlobalConfiguration.Configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);
 

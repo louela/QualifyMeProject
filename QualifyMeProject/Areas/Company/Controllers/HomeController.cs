@@ -10,21 +10,20 @@ namespace QualifyMeProject.Areas.Company.Controllers
 {
     public class HomeController : Controller
     {
-        IUsersService us;
+        ICompaniesService cs;
 
-        public HomeController(IUsersService us)
+        public HomeController(ICompaniesService cs)
         {
-            this.us = us;
+            this.cs = cs;
         }
+        public ActionResult Index()
+        {
+            return View();
+        }
+      
 
-        public ActionResult Login()
-        {
-            LoginViewModel lvm = new LoginViewModel();
-            return View(lvm);
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-       
+        
+
         public ActionResult Logout()
         {
             Session.Abandon();

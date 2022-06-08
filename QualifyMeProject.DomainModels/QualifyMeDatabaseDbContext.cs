@@ -10,5 +10,6 @@ namespace QualifyMeProject.DomainModels
     public class QualifyMeDatabaseDbContext : DbContext
     {
         public DbSet<User> Users { get; set; }
+        public DbSet<CompanyUser> Companies { get; set; }
     }
 }

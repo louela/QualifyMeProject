@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QualifyMeProject", "Qualify
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QualifyMeProject.DomainModels", "QualifyMeProject.DomainModels\QualifyMeProject.DomainModels.csproj", "{7BB08CC4-DFF9-4502-BD34-FF2EB6154027}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QualifyMeProject.ViewModels", "QualifyMeProject.ViewModels\QualifyMeProject.ViewModels.csproj", "{FE236115-C44D-4E06-8C2B-169306F22A8D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QualifyMeProject.ViewModel", "QualifyMeProject.ViewModels\QualifyMeProject.ViewModel.csproj", "{FE236115-C44D-4E06-8C2B-169306F22A8D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QualifyMeProject.Repositories", "QualifyMeProject.Repositories\QualifyMeProject.Repositories.csproj", "{3AC1CD3A-384E-434E-B603-A312B76D963A}"
 EndProject

@@ -71,6 +71,11 @@ namespace QualifyMeProject.Controllers
                         return RedirectToAction("Index", "Home", new { area = "Admin" });
 
                     }
+                    else if (uvm.Email == "company@gmail.com")
+                    {
+                        return RedirectToAction("Index", "Home", new { area = "Company" });
+                    }
+
                     else
                         return RedirectToAction("Index", "Home");
                 }
