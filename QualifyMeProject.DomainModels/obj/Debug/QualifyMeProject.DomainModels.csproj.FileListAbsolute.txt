@@ -22,3 +22,15 @@ C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.DomainModels\obj\D
 C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.DomainModels\obj\Debug\QualifyMeProject.DomainModels.csproj.CopyComplete
 C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.DomainModels\obj\Debug\QualifyMeProject.DomainModels.dll
 C:\Users\louel\source\repos\QualifyMeProject\QualifyMeProject.DomainModels\obj\Debug\QualifyMeProject.DomainModels.pdb
+C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.DomainModels\bin\Debug\QualifyMeProject.DomainModels.dll.config
+C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.DomainModels\bin\Debug\QualifyMeProject.DomainModels.dll
+C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.DomainModels\bin\Debug\QualifyMeProject.DomainModels.pdb
+C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.DomainModels\bin\Debug\EntityFramework.dll
+C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.DomainModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.DomainModels\bin\Debug\EntityFramework.xml
+C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.DomainModels\bin\Debug\EntityFramework.SqlServer.xml
+C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.DomainModels\obj\Debug\QualifyMeProject.DomainModels.csproj.AssemblyReference.cache
+C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.DomainModels\obj\Debug\QualifyMeProject.DomainModels.csproj.CoreCompileInputs.cache
+C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.DomainModels\obj\Debug\QualifyMeProject.DomainModels.csproj.CopyComplete
+C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.DomainModels\obj\Debug\QualifyMeProject.DomainModels.dll
+C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.DomainModels\obj\Debug\QualifyMeProject.DomainModels.pdb
