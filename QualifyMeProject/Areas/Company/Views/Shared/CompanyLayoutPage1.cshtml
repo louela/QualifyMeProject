@@ -1,0 +1,87 @@
+﻿@using System.Web.Optimization
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - QualifyMe</title>
+    @Styles.Render("~/Styles/bootstrap")
+    @Styles.Render("~/Styles/site")
+    @Scripts.Render("~/Scripts/bootstrap")
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm text-light navbar-light">
+            <a class="navbar-brand" href="#">QualifyMe</a>
+
+
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavBar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            @if (Session["CurrentCompanyName"] != null)
+            {
+
+                <div class="collapse navbar-collapse" id="collapsibleNavBar">
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/company/home/index">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/company/home/index">Courses</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/company/home/index">Companies</a>
+                        </li>
+                       
+
+                    </ul>
+                    <form class="form-inline" action="/company/home/search">
+                        <input type="search" class="form-control mr-sm-2" style="width:150px" placeholder="Search" name="str">
+                        <button class="btn btn-success">Search</button>
+                    </form>
+
+                </div>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown">
+                        <img class="img-fluid" src="~/Images/user.png" width="20px" />
+                        @Session["CurrentCompanyName"]
+
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/company/account/profile">View Profile</a>
+                        <a class="dropdown-item" href="/company/account/editcompanyprofile">Edit Profile</a>
+                        <a class="dropdown-item" href="/company/account/settings">Settings</a>
+                        <a class="dropdown-item" href="/company/account/logout">Logout</a>
+                    </div>
+
+                </li>
+            }
+            @if (Session["CurrentCompanyName"] == null)
+            {
+
+
+                <li class="nav-item dropdown"  >
+                   
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown">
+                        Login
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/account/login">Login as Student</a>
+                        <a class="dropdown-item" href="/company/account/login">Login as Company</a>
+                    </div>
+                </li>
+
+
+
+            }
+
+
+        </nav>
+
+        @RenderBody()
+    </div>
+</body>
+</html>
