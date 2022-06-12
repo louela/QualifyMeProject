@@ -19,55 +19,67 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            @if (Session["CurrentUserName"] != null)
+            {
 
+                <div class="collapse navbar-collapse" id="collapsibleNavBar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/admin/home/index">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/admin/home/courses">Courses</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/admin/home/companies">Companies</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/admin/home/students">Students</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline" action="/admin/home/search">
+                        <input type="search" class="form-control mr-sm-2" style="width:150px" placeholder="Search" name="str">
+                        <button class="btn btn-success">Search</button>
+                    </form>
+                </div>
 
-            <div class="collapse navbar-collapse" id="collapsibleNavBar">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/home/index">Home</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/home/index">Courses</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/home/index">Companies</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/home/index">Students</a>
-                    </li>
-                </ul>
-                <form class="form-inline" action="/home/search">
-                    <input type="search" class="form-control mr-sm-2" style="width:150px" placeholder="Search" name="str">
-                    <button class="btn btn-success">Search</button>
-                </form>
-            </div>
+            }
             @if (Session["CurrentUserName"] == null)
             {
                 <li class="nav-item  active">
                     <a class="nav-link" href="/account/login">Login</a>
                 </li>
-                <li class="nav-item  active">
-                    <a class="nav-link" href="/account/register">Register</a>
-                </li>
+               
             }
-            @if (Session["CurrentUserName"] != null)
-            {
+          
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown">
                         <img class="img-fluid" src="~/Images/user.png" width="20px" />
                         @Session["CurrentUserName"]
-                        <a class="dropdown-item" href="/account/logout">Logout</a>
+                        
                     </a>
                     <div class="dropdown-menu bg-info">
-                        <a class="dropdown-item" href="/account/logout">Logout</a>
-                        <a class="dropdown-item" href="/account/changeprofile">Change Profile</a>
-                        <a class="dropdown-item" href="/account/changepassword">Change Password</a>
-
+                        <a class="dropdown-item" href="/admin/home/logout">Logout</a>
+                        
 
                     </div>
                 </li>
-            }
+            
+            @if (Session["CurrentUserName"] == null)
+            {
 
+              
+                <li class="nav-item">
+                    <a class="nav-link" href="/account/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/account/register">Register</a>
+                </li>
+
+
+
+
+            }
 
 
 
