@@ -48,34 +48,36 @@
                         <img class="img-fluid" src="~/Images/user.png" width="20px" />
                         @Session["CurrentUserName"]
 
-                    </a>                 
+                    </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="/account/profile">View Profile</a>
                         <a class="dropdown-item" href="/account/settings">Settings</a>
                         <a class="dropdown-item" href="/account/logout">Logout</a>
                     </div>
-                   
+
                 </li>
             }
             @if (Session["CurrentUserName"] == null)
             {
+        <div class="dropbtn">
+            <li class="nav-item dropdown">
 
-          
+                <a class="dropdown">
+                    Login
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/account/login">Login as Student</a>
+                    <a class="dropdown-item" href="/company/account/login">Login as Company</a>
+                </div>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/account/login">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/account/register">Register</a>
-                </li>
-         
-
+        </div>
 
 
             }
 
 
-</nav>
+        </nav>
        
         @RenderBody()
     </div>

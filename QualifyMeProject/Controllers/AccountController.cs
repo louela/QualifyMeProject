@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using QualifyMeProject.CustomFilters;
 using QualifyMeProject.ViewModels;
 using QualifyMeProject.ServiceLayer;
 
@@ -12,10 +13,12 @@ namespace QualifyMeProject.Controllers
     public class AccountController : Controller
     {
         IUsersService us;
+        ICompanyUsersService cs;
 
-        public AccountController(IUsersService us)
+        public AccountController(IUsersService us, ICompanyUsersService cs)
         {
             this.us = us;
+            this.cs = cs;
         }
 
         public ActionResult Register()
@@ -71,7 +74,8 @@ namespace QualifyMeProject.Controllers
 
                     if (uvm.IsAdmin)
                     {
-                        return RedirectToRoute(new { Controller = "Home", action = "Index" });
+                        return RedirectToAction("Index", "Home", new { area = "Admin" });
+
 
                     }
                     else
@@ -105,5 +109,7 @@ namespace QualifyMeProject.Controllers
             Session.Abandon();
             return RedirectToAction("Index", "Home");
         }
+
+       
     }
 }
