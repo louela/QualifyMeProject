@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using QualifyMeProject.CustomFilters;
 using QualifyMeProject.ViewModels;
 using QualifyMeProject.ServiceLayer;
+using QualifyMeProject.CustomFilter;
 
 
 namespace QualifyMeProject.Controllers
@@ -13,9 +14,14 @@ namespace QualifyMeProject.Controllers
     public class AccountController : Controller
     {
         IUsersService us;
+<<<<<<< Updated upstream
         ICompanyUsersService cs;
 
         public AccountController(IUsersService us, ICompanyUsersService cs)
+=======
+
+        public AccountController(IUsersService us)
+>>>>>>> Stashed changes
         {
             this.us = us;
             this.cs = cs;
@@ -70,8 +76,13 @@ namespace QualifyMeProject.Controllers
                     Session["CurrentUserMobile"] = uvm.Mobile;
                     Session["CurrentUserPassword"] = uvm.Password;
                     Session["CurrentUserIsAdmin"] = uvm.IsAdmin;
+<<<<<<< Updated upstream
                     
 
+=======
+                  
+                    
+>>>>>>> Stashed changes
                     if (uvm.IsAdmin)
                     {
                         return RedirectToAction("Index", "Home", new { area = "Admin" });
@@ -86,7 +97,11 @@ namespace QualifyMeProject.Controllers
                     ModelState.AddModelError("x", "Invalid Email / Password");
                     return View(lvm);
                 }
+<<<<<<< Updated upstream
 
+=======
+               
+>>>>>>> Stashed changes
             }
             else
             {
@@ -96,6 +111,7 @@ namespace QualifyMeProject.Controllers
 
         }
 
+<<<<<<< Updated upstream
         public ActionResult Profile()
         {
             UserViewModel uvm = new UserViewModel();
@@ -103,6 +119,47 @@ namespace QualifyMeProject.Controllers
         }
 
      
+=======
+            public ActionResult Profile()
+            {
+            UserViewModel uvm = new UserViewModel();
+                return View();
+            }
+          
+          
+           public ActionResult Company()
+        {
+            return View();
+        }
+        [UserAuthorizationFilterAttribute]
+        public ActionResult EditDetails()
+        {
+            int uid = Convert.ToInt32(Session["CurrentUserID"]);
+            UserViewModel uvm = this.us.GetUsersByUserID(uid);
+            EditUserDetailsViewModel eudvm = new EditUserDetailsViewModel() { Name = uvm.Name, Mobile = uvm.Mobile, Email = uvm.Email, UserID = uvm.UserID , ID = uvm.ID};
+            return View(eudvm);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [UserAuthorizationFilterAttribute]
+        public ActionResult EditDetails(EditUserDetailsViewModel eudvm)
+        {
+            if(ModelState.IsValid)
+            {
+                eudvm.UserID = Convert.ToInt32(Session["CurrentUserID"]);
+                this.us.UpdateUsersDetails(eudvm);
+                Session["CurrentUserName"] = eudvm.Name;
+                return RedirectToAction("EditDetails", "Account");
+            }
+            else
+            {
+                ModelState.AddModelError("x", "Invalid Data");
+                return View(eudvm);
+            }
+        }
+
+>>>>>>> Stashed changes
 
         public ActionResult Logout()
         {
