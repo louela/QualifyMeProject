@@ -205,6 +205,9 @@
     <Content Include="Areas\Admin\Views\Home\Students.cshtml" />
     <Content Include="Areas\Company\Views\Account\Profile.cshtml" />
     <Content Include="Areas\Company\Views\Account\EditCompanyProfile.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Courses.cshtml" />
+    <Content Include="Areas\Admin\Views\Courses\AddCourse.cshtml" />
+    <Content Include="Areas\Company\Views\Home\Courses.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -227,6 +230,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\CompaniesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CoursesController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Company\CompanyAreaRegistration.cs" />
     <Compile Include="Areas\Company\Controllers\AccountController.cs" />
@@ -234,11 +238,11 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-<<<<<<< Updated upstream
+
     <Compile Include="CustomFilters\CompanyUserAuthorizationFilterAttribute.cs" />
-=======
+
     <Compile Include="CustomFilter\UserAuthorizationFilterAttribute.cs" />
->>>>>>> Stashed changes
+
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -264,12 +268,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Profile.cshtml" />
-<<<<<<< Updated upstream
-=======
+
+
     <Content Include="Views\Courses\Index.cshtml" />
     <Content Include="Views\Company\Index.cshtml" />
     <Content Include="Views\Account\EditDetails.cshtml" />
->>>>>>> Stashed changes
+
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

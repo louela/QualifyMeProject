@@ -12,10 +12,7 @@ namespace QualifyMeProject.ViewModels
     public class LoginViewModel
     {
         [Required]
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
         public string Email { get; set; }
 
 
