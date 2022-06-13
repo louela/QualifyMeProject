@@ -13,11 +13,13 @@ namespace QualifyMeProject.Areas.Admin.Controllers
         // GET: Admin/Home
         private IUsersService us;
         private ICompanyUsersService cs;
+        private ICoursesService cos;
 
-        public HomeController(IUsersService us, ICompanyUsersService cs)
+        public HomeController(IUsersService us, ICompanyUsersService cs, ICoursesService cos)
         {
             this.us = us;
             this.cs = cs;
+            this.cos = cos;
            
         }
      
@@ -88,6 +90,14 @@ namespace QualifyMeProject.Areas.Admin.Controllers
 
             List<UserViewModel> uvm = this.us.GetUsers().Take(10).ToList();
             return View(uvm);
+
+        }
+
+        public ActionResult Courses()
+        {
+
+            List<CourseViewModel> cvm = this.cos.GetCourses().Take(10).ToList();
+            return View(cvm);
 
         }
 

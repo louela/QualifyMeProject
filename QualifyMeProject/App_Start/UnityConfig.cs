@@ -19,6 +19,7 @@ namespace QualifyMeProject
 
             container.RegisterType<IUsersService, UsersService>();
             container.RegisterType<ICompanyUsersService, CompanyUsersService>();
+            container.RegisterType<ICoursesService, CoursesService>();
             DependencyResolver.SetResolver(new Unity.Mvc5.UnityDependencyResolver(container));
             GlobalConfiguration.Configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);
 
