@@ -14,14 +14,11 @@ namespace QualifyMeProject.Controllers
     public class AccountController : Controller
     {
         IUsersService us;
-<<<<<<< Updated upstream
+
         ICompanyUsersService cs;
 
         public AccountController(IUsersService us, ICompanyUsersService cs)
-=======
 
-        public AccountController(IUsersService us)
->>>>>>> Stashed changes
         {
             this.us = us;
             this.cs = cs;
@@ -76,13 +73,7 @@ namespace QualifyMeProject.Controllers
                     Session["CurrentUserMobile"] = uvm.Mobile;
                     Session["CurrentUserPassword"] = uvm.Password;
                     Session["CurrentUserIsAdmin"] = uvm.IsAdmin;
-<<<<<<< Updated upstream
-                    
 
-=======
-                  
-                    
->>>>>>> Stashed changes
                     if (uvm.IsAdmin)
                     {
                         return RedirectToAction("Index", "Home", new { area = "Admin" });
@@ -90,18 +81,14 @@ namespace QualifyMeProject.Controllers
 
                     }
                     else
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Home", "Home");
                 }
                 else
                 {
                     ModelState.AddModelError("x", "Invalid Email / Password");
                     return View(lvm);
                 }
-<<<<<<< Updated upstream
 
-=======
-               
->>>>>>> Stashed changes
             }
             else
             {
@@ -111,21 +98,12 @@ namespace QualifyMeProject.Controllers
 
         }
 
-<<<<<<< Updated upstream
         public ActionResult Profile()
         {
             UserViewModel uvm = new UserViewModel();
             return View();
         }
 
-     
-=======
-            public ActionResult Profile()
-            {
-            UserViewModel uvm = new UserViewModel();
-                return View();
-            }
-          
           
            public ActionResult Company()
         {
@@ -159,7 +137,7 @@ namespace QualifyMeProject.Controllers
             }
         }
 
->>>>>>> Stashed changes
+
 
         public ActionResult Logout()
         {
