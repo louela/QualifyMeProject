@@ -17,6 +17,7 @@ namespace QualifyMeProject.DomainModels
         public string Mobile { get; set; }
         public bool IsAdmin { get; set; }
       
+        public string ProfilePicture { get; set; }
 
     }
 }

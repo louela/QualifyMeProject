@@ -1,30 +1,29 @@
-﻿@model List<QualifyMeProject.ViewModels.UserViewModel>
+﻿@model List<QualifyMeProject.ViewModels.CourseViewModel>
 
-@{ 
-    ViewBag.Title = "Students";
+@{
+    ViewBag.Title = "Courses";
 }
 
 <div class="row">
     <div class="col-sm-12">
-        <h4>List of Student</h4>
+        <h4>List of Courses</h4>
         <ul class="list-group list-group-flush">
+           
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>Student ID</th>
-                        <th>Name</th>
-                        <th>Mobile</th>
-                        <th>Email</th>
+                        <th>ID</th>
+                        <th>Department</th>
+                        <th>Specification</th>
                     </tr>
                 </thead>
                 @foreach (var item in Model)
                 {
                     <tbody>
                         <tr>
-                            <td>@item.ID</td>
-                            <td>@item.Name</td>
-                            <td>@item.Mobile</td>
-                            <td>@item.Email</td>
+                            <td>@item.CourseID</td>
+                            <td>@item.CourseDepartment</td>
+                            <td>@item.CourseSpecification</td>
                         </tr>
                     </tbody>
                 }

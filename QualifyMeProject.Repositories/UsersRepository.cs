@@ -17,6 +17,7 @@ namespace QualifyMeProject.Repositories
         List<User> GetUsers();
         int GetLatestUserID();
         List<User> GetUsersByEmailAndPassword(string Email, string Password);
+        List<User> GetUsersByUserID(int UserID);
     }
 
     public class UsersRepository : IUsersRepository
@@ -41,6 +42,7 @@ namespace QualifyMeProject.Repositories
             {
                 us.Name = u.Name;
                 us.Mobile = u.Mobile;
+                us.Email = u.Email;
                 db.SaveChanges();
 
             }
@@ -79,6 +81,11 @@ namespace QualifyMeProject.Repositories
         public List<User> GetUsersByEmailAndPassword(string Email, string PasswordHash)
         {
             List<User> us = db.Users.Where(temp => temp.Email == Email && temp.PasswordHash == PasswordHash).ToList();
+            return us;
+        }
+        public List<User> GetUsersByUserID(int UserID)
+        {
+            List<User> us = db.Users.Where(temp => temp.UserID == UserID).ToList();
             return us;
         }
     }

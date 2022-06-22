@@ -16,8 +16,12 @@ namespace QualifyMeProject.ServiceLayer
         int InsertUser(RegisterViewModel uvm);
 
         void DeleteUser(int uid);
+        void UpdateUsersDetails(EditUserDetailsViewModel uvm);
         List<UserViewModel> GetUsers();
         UserViewModel GetUsersByEmailAndPassword(string Email, string Password);
+        UserViewModel GetUsersByUserID(int UserID);
+
+
 
     }
 
@@ -68,6 +72,25 @@ namespace QualifyMeProject.ServiceLayer
                 uvm = mapper.Map<User, UserViewModel>(u);
             }
             return uvm;
+        }
+        public UserViewModel GetUsersByUserID(int UserID)
+        {
+            User u = ur.GetUsersByUserID(UserID).FirstOrDefault();
+            UserViewModel uvm = null;
+            if(u!= null)
+            {
+                var config = new MapperConfiguration(cfg => { cfg.CreateMap<User, UserViewModel>(); cfg.IgnoreUnmapped(); });
+                IMapper mapper = config.CreateMapper();
+                uvm = mapper.Map<User, UserViewModel>(u);
+            }
+            return uvm;
+        }
+        public void UpdateUsersDetails(EditUserDetailsViewModel uvm)
+        {
+            var config = new MapperConfiguration(cfg => { cfg.CreateMap<EditUserDetailsViewModel, User>(); cfg.IgnoreUnmapped(); });
+            IMapper mapper = config.CreateMapper();
+            User u = mapper.Map<EditUserDetailsViewModel, User>(uvm);
+            ur.UpdateUserDetails(u);
         }
 
 
