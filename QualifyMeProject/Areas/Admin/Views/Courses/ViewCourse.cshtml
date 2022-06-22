@@ -1,0 +1,25 @@
+﻿@model List<QualifyMeProject.ViewModels.CourseViewModel>
+
+@{
+    ViewBag.Title = "View Course";
+
+}
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <h4>View Courses</h4>
+        <table class="table">
+            @foreach (var item in Model)
+            {
+                <span>
+                    <a class="text-primary">@item.CourseSpecification</a>
+                </span>
+            }
+        </table>
+    </div>
+</div>
+
+<script>
+    //   $("a[href='/home/questions']").attr("id", "active");
+</script>

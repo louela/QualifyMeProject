@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QualifyMeProject.DomainModels;
+using QualifyMeProject.Repositories;
+using QualifyMeProject.ViewModels;
+
+
 
 namespace QualifyMeProject.Repositories
 {
@@ -12,9 +16,13 @@ namespace QualifyMeProject.Repositories
         void InsertCourse(Course c);
         void UpdateCourseDetails(Course c);
         void DeleteCourse(int cid);
-        List<Course> GetCoursesByDepartment();
+        List<Course> GetCourses();
         int GetLatestCourseID();
         List<Course> GetCoursesByCourseID(int CourseID);
+        List<Course> GetCoursesBySpecification(string CourseSpecification);
+
+
+
     }
 
     public class CoursesRepository : ICoursesRepository
@@ -54,9 +62,9 @@ namespace QualifyMeProject.Repositories
             }
         }
 
-        public List<Course> GetCoursesByDepartment()
+        public List<Course> GetCourses()
         {
-            List<Course> co = db.Courses.OrderBy(temp => temp.CourseDepartment).ToList();
+            List<Course> co = db.Courses.OrderByDescending(temp => temp.CourseDepartment).ToList();
             return co;
         }
 
@@ -71,5 +79,13 @@ namespace QualifyMeProject.Repositories
             List<Course> co = db.Courses.Where(temp => temp.CourseID == CourseID).ToList();
             return co;
         }
+
+        public List<Course> GetCoursesBySpecification(string CourseSpecification)
+        {
+            List<Course> co = db.Courses.Where(temp => temp.CourseSpecification == CourseSpecification ).OrderByDescending(temp => temp.CourseSpecification).ToList();
+            return co;
+        }
+
+
     }
 }

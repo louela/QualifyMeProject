@@ -75,8 +75,8 @@ namespace QualifyMeProject.Areas.Company.Controllers
 
         public ActionResult Logout()
         {
-            Session.Abandon();
-            return RedirectToAction("Index", "Home",new { area = "Company" });
+           Session.Abandon();
+            return RedirectToAction("Index", "Home", new { Area = "" });
         }
 
 

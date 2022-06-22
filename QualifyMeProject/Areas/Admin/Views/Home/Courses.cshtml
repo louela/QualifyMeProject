@@ -1,11 +1,14 @@
 ﻿@model List<QualifyMeProject.ViewModels.CourseViewModel>
 
-@{ 
+@{
     ViewBag.Title = "Courses";
+
 }
+
 
 <div class="row">
     <div class="col-sm-12">
+<<<<<<< Updated upstream
         <h4>List of Courses</h4>
         <ul class="list-group list-group-flush">
             <li class="nav-item active">
@@ -31,9 +34,25 @@
                 }
             </table>
         </ul>
+=======
+        <table class="table">
+            @foreach (var item in Model)
+            {
+                <span>
+            <a href="/admin/courses/viewcourse/@item.CourseID" class="text-primary">@item.CourseDepartment</a>
+                </span>
+            }
+        </table>
+        @if (Session["CurrentUserName"] != null)
+        {
+            <a href="/admin/courses/addcourse" class="btn btn-primary">Add Course</a>
+        }
+>>>>>>> Stashed changes
     </div>
 </div>
 
 <script>
-    //  $("a[href='/home/categories']").attr("id", "active");
+    //   $("a[href='/home/questions']").attr("id", "active");
 </script>
+
+

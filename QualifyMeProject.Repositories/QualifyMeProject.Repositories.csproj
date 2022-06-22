@@ -62,6 +62,10 @@
       <Project>{7bb08cc4-dff9-4502-bd34-ff2eb6154027}</Project>
       <Name>QualifyMeProject.DomainModels</Name>
     </ProjectReference>
+    <ProjectReference Include="..\QualifyMeProject.ViewModels\QualifyMeProject.ViewModels.csproj">
+      <Project>{fe236115-c44d-4e06-8c2b-169306f22a8d}</Project>
+      <Name>QualifyMeProject.ViewModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

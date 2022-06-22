@@ -31,7 +31,7 @@ namespace QualifyMeProject.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult AddCourse(AddCourseViewModel acm)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) 
             {
                 int cid = this.cos.InsertCourse(acm);
                 Session["CurrentCourseID"] = cid;
@@ -46,6 +46,12 @@ namespace QualifyMeProject.Areas.Admin.Controllers
                 return View();
             }
 
+        }
+
+        public ActionResult ViewCourse(string CourseSpecification)
+        {
+            List<CourseViewModel> cvm = this.cos.GetCoursesBySpecification(CourseSpecification).Take(10).ToList();
+            return View(cvm);
         }
     }
 }
