@@ -13,7 +13,7 @@
 <body>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-sm text-light navbar-light">
-            <a class="navbar-brand" href="#">QualifyMe</a>
+            <a class="navbar-brand" href="/Home/Index.cshtml">QualifyMe</a>
 
 
             <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavBar">
@@ -59,24 +59,7 @@
 
                 </li>
             }
-            @if (Session["CurrentCompanyName"] == null)
-            {
-
-
-                <li class="nav-item dropdown"  >
-                   
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown">
-                        Login
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/account/login">Login as Student</a>
-                        <a class="dropdown-item" href="/company/account/login">Login as Company</a>
-                    </div>
-                </li>
-
-
-
-            }
+          
 
 
         </nav>

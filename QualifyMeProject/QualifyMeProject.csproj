@@ -156,13 +156,16 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Styles.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\2x2.png" />
     <Content Include="Images\avatar.png" />
+    <Content Include="Images\company.png" />
     <Content Include="Images\down-color.png" />
     <Content Include="Images\down-empty.png" />
     <Content Include="Images\facebook.png" />
     <Content Include="Images\instagram.png" />
     <Content Include="Images\linkedin.png" />
     <Content Include="Images\map.svg" />
+    <Content Include="Images\student.png" />
     <Content Include="Images\twitter.png" />
     <Content Include="Images\up-color.png" />
     <Content Include="Images\up-empty.png" />
@@ -235,8 +238,10 @@
     <Compile Include="Areas\Company\Controllers\AccountController.cs" />
     <Compile Include="Areas\Company\Controllers\HomeController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="CustomFilters\CompanyUserAuthorizationFilterAttribute.cs" />
+    <Compile Include="CustomFilters\UserAuthorizationFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -262,6 +267,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Profile.cshtml" />
+    <Content Include="Views\Courses\Index.cshtml" />
+    <Content Include="Views\Company\Index.cshtml" />
+    <Content Include="Views\Account\EditDetails.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Home\Companies.cshtml" />
+    <Content Include="Views\Home\Courses.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -276,7 +287,6 @@
     <Folder Include="Areas\Admin\Views\Default\" />
     <Folder Include="Areas\Company\Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Company\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QualifyMeProject.DomainModels\QualifyMeProject.DomainModels.csproj">
