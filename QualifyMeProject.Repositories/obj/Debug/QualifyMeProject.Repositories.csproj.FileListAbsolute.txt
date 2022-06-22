@@ -43,3 +43,6 @@ C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.Repositories\obj\Debu
 C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.Repositories\obj\Debug\QualifyMeProject.Repositories.csproj.CopyComplete
 C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.Repositories\obj\Debug\QualifyMeProject.Repositories.dll
 C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.Repositories\obj\Debug\QualifyMeProject.Repositories.pdb
+C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.Repositories\bin\Debug\QualifyMeProject.ViewModels.dll
+C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.Repositories\bin\Debug\QualifyMeProject.ViewModels.pdb
+C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.Repositories\bin\Debug\QualifyMeProject.ViewModels.dll.config

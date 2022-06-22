@@ -16,6 +16,7 @@ namespace QualifyMeProject.ServiceLayer
         void UpdateCompanyUserDetails(EditCourseDetailsViewModel ecdvm);
         void DeleteCourse(int cid);
         List<CourseViewModel> GetCourses();
+        List<CourseViewModel> GetCoursesBySpecification(string CourseSpecification);
         CourseViewModel GetCoursesByCourseID(int CourseID);
     }
 
@@ -56,7 +57,7 @@ namespace QualifyMeProject.ServiceLayer
 
         public List<CourseViewModel> GetCourses()
         {
-            List<Course> co = cor.GetCoursesByDepartment();
+            List<Course> co = cor.GetCourses();
             var config = new MapperConfiguration(cfg => { cfg.CreateMap<Course, CourseViewModel>(); cfg.IgnoreUnmapped(); });
             IMapper mapper = config.CreateMapper();
             List<CourseViewModel> cvm = mapper.Map<List<Course>, List<CourseViewModel>>(co);
@@ -74,6 +75,16 @@ namespace QualifyMeProject.ServiceLayer
                 cvm = mapper.Map<Course, CourseViewModel>(co);
 
             }
+            return cvm;
+        }
+
+
+        public List<CourseViewModel> GetCoursesBySpecification(string CourseSpecification)
+        {
+            List<Course> co = cor.GetCoursesBySpecification(CourseSpecification);
+            var config = new MapperConfiguration(cfg => { cfg.CreateMap<Course, CourseViewModel>(); cfg.IgnoreUnmapped(); });
+            IMapper mapper = config.CreateMapper();
+            List<CourseViewModel> cvm = mapper.Map<List<Course>, List<CourseViewModel>>(co);
             return cvm;
         }
     }
