@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="AddCompanyViewModel.cs" />
     <Compile Include="AddCourseViewModel.cs" />
+    <Compile Include="AddJobViewModel.cs" />
     <Compile Include="CompanyLoginViewModel.cs" />
     <Compile Include="CompanyUserViewModel.cs" />
     <Compile Include="CourseViewModel.cs" />

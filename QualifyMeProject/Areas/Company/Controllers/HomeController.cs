@@ -29,5 +29,7 @@ namespace QualifyMeProject.Areas.Company.Controllers
             List<CourseViewModel> cvm = this.cos.GetCourses().Take(10).ToList();
             return View(cvm);
         }
+
+        
     }
 }

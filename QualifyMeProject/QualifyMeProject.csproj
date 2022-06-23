@@ -211,6 +211,7 @@
     <Content Include="Areas\Admin\Views\Courses\AddCourse.cshtml" />
     <Content Include="Areas\Company\Views\Home\Courses.cshtml" />
     <Content Include="Areas\Admin\Views\Courses\ViewCourse.cshtml" />
+    <Content Include="Areas\Company\Views\Jobs\JobListings.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -238,6 +239,7 @@
     <Compile Include="Areas\Company\CompanyAreaRegistration.cs" />
     <Compile Include="Areas\Company\Controllers\AccountController.cs" />
     <Compile Include="Areas\Company\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Company\Controllers\JobsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />

@@ -1,55 +1,47 @@
-﻿@model QualifyMeProject.ViewModels.CourseViewModel
+﻿@model List<QualifyMeProject.ViewModels.CourseViewModel>
 
 @{
     ViewBag.Title = "Courses";
+
 }
+
 
 <div class="row">
     <div class="col-sm-12">
+
         <h4>List of Courses</h4>
-<<<<<<< Updated upstream
         <ul class="list-group list-group-flush">
-            <li class="nav-item active">
-                <a class="nav-link" href="/admin/courses/addcourse">Add Course</a>
-            </li>
+            
             <table class="table table-striped table-hover">
                 <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Department</th>
-                        <th>Specification</th>
-                    </tr>
+                <tr>
+                    <th>ID</th>
+                    <th>Department</th>
+                    <th>Specification</th>
+                </tr>
                 </thead>
                 @foreach (var item in Model)
                 {
                     <tbody>
-                        <tr>
-                            <td>@item.CourseID</td>
-                            <td>@item.CourseDepartment</td>
-                            <td>@item.CourseSpecification</td>
-                        </tr>
+                    <tr>
+                        <td>@item.CourseID</td>
+                        <td>@item.CourseDepartment</td>
+                        <td>@item.CourseSpecification</td>
+                    </tr>
                     </tbody>
                 }
             </table>
         </ul>
-=======
-        
-           
-            
-            
-            <td class="text-dark">
-                <a href="/admin/courses/view/@Model.CourseID" class="text-primary">@Model.CourseDepartment</a>
-                <br />
 
-            </td>
-            
-            
-            
+      
+        @if (Session["CurrentUserName"] != null)
+        {
+            <a href="/admin/courses/addcourse" class="btn btn-primary">Add Course</a>
+        }
 
->>>>>>> Stashed changes
     </div>
 </div>
 
 <script>
-    //  $("a[href='/home/categories']").attr("id", "active");
+    //   $("a[href='/home/questions']").attr("id", "active");
 </script>
