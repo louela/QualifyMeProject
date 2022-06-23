@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="CompanyUser.cs" />
     <Compile Include="Course.cs" />
+    <Compile Include="Department.cs" />
     <Compile Include="Job.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QualifyMeDatabaseDbContext.cs" />

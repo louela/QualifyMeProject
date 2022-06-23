@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="CompanyUsersRepository.cs" />
     <Compile Include="CoursesRepository.cs" />
+    <Compile Include="DepartmentsRepository.cs" />
     <Compile Include="JobsRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsersRepository.cs" />

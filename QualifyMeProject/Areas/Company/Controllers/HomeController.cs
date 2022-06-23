@@ -12,10 +12,12 @@ namespace QualifyMeProject.Areas.Company.Controllers
     {
         // GET: Company/Home
         private ICoursesService cos;
-        public HomeController( ICoursesService cos)
+        private IDepartmentsService dos;
+        public HomeController( ICoursesService cos,IDepartmentsService dos)
         {
            
             this.cos = cos;
+            this.dos = dos;
 
         }
         public ActionResult Index()
@@ -30,6 +32,12 @@ namespace QualifyMeProject.Areas.Company.Controllers
             return View(cvm);
         }
 
-        
+        public ActionResult Departments()
+        {
+            List<DepartmentViewModel> dvm = this.dos.GetDepartments().Take(10).ToList();
+            return View(dvm);
+        }
+
+
     }
 }

@@ -33,10 +33,10 @@ namespace QualifyMeProject.Areas.Admin.Controllers
         {
             if (ModelState.IsValid) 
             {
-                int cid = this.cos.InsertCourse(acm);
+                int cid = this.cos.AddCourse(acm);
                 Session["CurrentCourseID"] = cid;
-                Session["CurrentCourseDepartment"] = acm.CourseDepartment;
-                Session["CurrentCourseSpecification"] = acm.CourseSpecification;
+                Session["CurrentDepartmentName"] = acm.DepartmentName;
+                Session["CurrentCourseName"] = acm.CourseName;
                 
                 return RedirectToAction("Index", "Home");
             }
@@ -48,9 +48,9 @@ namespace QualifyMeProject.Areas.Admin.Controllers
 
         }
 
-        public ActionResult ViewCourse(string CourseSpecification)
+        public ActionResult ViewCourse()
         {
-            List<CourseViewModel> cvm = this.cos.GetCoursesBySpecification(CourseSpecification).Take(10).ToList();
+            List<CourseViewModel> cvm = this.cos.GetCourses().Take(10).ToList();
             return View(cvm);
         }
     }

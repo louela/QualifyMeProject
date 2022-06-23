@@ -17,7 +17,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Department</th>
-                        <th>Specification</th>
+                        <th>Course</th>
                     </tr>
                 </thead>
                 @foreach (var item in Model)
@@ -25,8 +25,8 @@
                     <tbody>
                         <tr>
                             <td>@item.CourseID</td>
-                            <td>@item.CourseDepartment</td>
-                            <td>@item.CourseSpecification</td>
+                            <td>@item.DepartmentName</td>
+                            <td>@item.DepartmentName</td>
                         </tr>
                     </tbody>
                 }

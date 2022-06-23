@@ -8,19 +8,13 @@ using System.Threading.Tasks;
 
 namespace QualifyMeProject.DomainModels
 {
-    public class Course
+    public class Department
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int CourseID { get; set; }
-       
         public int DeptID { get; set; }
+
         public string DepartmentName { get; set; }
-        public string CourseName { get; set; }
-
-
-        [ForeignKey("DeptID")]
-        public virtual Department Department { get; set; }
-
+        
     }
 }

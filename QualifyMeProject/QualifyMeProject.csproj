@@ -212,6 +212,8 @@
     <Content Include="Areas\Company\Views\Home\Courses.cshtml" />
     <Content Include="Areas\Admin\Views\Courses\ViewCourse.cshtml" />
     <Content Include="Areas\Company\Views\Jobs\JobListings.cshtml" />
+    <Content Include="Areas\Company\Views\Jobs\AddJob.cshtml" />
+    <Content Include="Areas\Company\Views\Home\Departments.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -238,6 +240,7 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Company\CompanyAreaRegistration.cs" />
     <Compile Include="Areas\Company\Controllers\AccountController.cs" />
+    <Compile Include="Areas\Company\Controllers\DepartmentsController.cs" />
     <Compile Include="Areas\Company\Controllers\HomeController.cs" />
     <Compile Include="Areas\Company\Controllers\JobsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -289,6 +292,7 @@
     <Folder Include="Areas\Admin\Views\Account\" />
     <Folder Include="Areas\Admin\Views\Default\" />
     <Folder Include="Areas\Company\Data\" />
+    <Folder Include="Areas\Company\Views\Departments\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
