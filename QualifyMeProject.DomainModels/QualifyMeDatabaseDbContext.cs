@@ -12,5 +12,6 @@ namespace QualifyMeProject.DomainModels
         public DbSet<User> Users { get; set; }
         public DbSet<CompanyUser> CompanyUsers { get; set; }
         public DbSet<Course> Courses { get; set; }
+        public DbSet<Job> Jobs { get; set; }
     }
 }
