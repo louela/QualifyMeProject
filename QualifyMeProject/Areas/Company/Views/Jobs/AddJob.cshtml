@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Add Job";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <h1>Add Job</h1>
+        <form novalidate="novalidate" action="/company/jobs/addjob" method="post" class="needs-validation">
+            @Html.AntiForgeryToken()
+            <div class="form-row">
+                <div class="form-group col-sm-6">
+                    <label for="txtJobTitle">Job Title</label>
+                    <input type="text" class="form-control" id="txtJobTitle" placeholder="Enter Job Title" name="JobTitle" required="required" pattern="^[a-zA-Z ]*$" autofocus="autofocus" />
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please Enter the Job Title/Position.
+                    </div>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="txtJobDescription">Job Description</label>
+                    <input type="text" class="form-control" id="txtJobDescription" placeholder="Enter Job Description" name="JobDescription" required="required"  />
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please Enter the Job Description.
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+            <div>
+                <label for="status">Job Status:</label>
+
+                <select name="status" id="status">
+                    <option value="volvo">Active</option>
+                    <option value="saab">Not Active</option>
+
+                </select>
+            </div>
+            
+
+            <button type="submit" class="btn btn-primary">Add Job</button>
+
+        </form>
+    </div>
+</div>

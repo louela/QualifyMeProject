@@ -54,12 +54,15 @@
   <ItemGroup>
     <Compile Include="AddCompanyViewModel.cs" />
     <Compile Include="AddCourseViewModel.cs" />
+    <Compile Include="AddDepartmentViewModel.cs" />
     <Compile Include="AddJobViewModel.cs" />
     <Compile Include="CompanyLoginViewModel.cs" />
     <Compile Include="CompanyUserViewModel.cs" />
     <Compile Include="CourseViewModel.cs" />
+    <Compile Include="DepartmentViewModel.cs" />
     <Compile Include="EditCompanyUserDetailsViewModel.cs" />
     <Compile Include="EditCourseDetailsViewModel.cs" />
+    <Compile Include="JobViewModel.cs" />
     <Compile Include="LoginViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterViewModel.cs" />

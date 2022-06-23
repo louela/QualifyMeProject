@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace QualifyMeProject.ViewModels
 {
-    public class CourseViewModel
+    public class DepartmentViewModel
     {
-        public int CourseID { get; set; }
+        public int DeptID { get; set; }
         public string DepartmentName { get; set; }
-        public string CourseName { get; set; }
+        
     }
 }

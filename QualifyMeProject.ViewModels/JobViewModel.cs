@@ -1,24 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace QualifyMeProject.ViewModels
 {
-    public class AddJobViewModel
+    public class JobViewModel
     {
-
-        [Required]
+        public int JobID { get; set; }
+        public int CompanyID { get; set; }
+        public int CourseID { get; set; }
         public string JobTitle { get; set; }
-        [Required]
         public string JobDescription { get; set; }
-
-        [Required]
+        public DateTime Date { get; set; }
         public bool IsActive { get; set; }
-
-
 
     }
 }

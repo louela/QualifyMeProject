@@ -13,13 +13,13 @@ namespace QualifyMeProject.Repositories
 {
     public interface ICoursesRepository
     {
-        void InsertCourse(Course c);
+        void AddCourse(Course c);
         void UpdateCourseDetails(Course c);
         void DeleteCourse(int cid);
         List<Course> GetCourses();
         int GetLatestCourseID();
-        List<Course> GetCoursesByCourseID(int CourseID);
-        List<Course> GetCoursesBySpecification(string CourseSpecification);
+        List<Course> GetCoursesByCourseName(string CourseName);
+        List<Course> GetCoursesByDepartmentName(string DepartmentName);
 
 
 
@@ -33,7 +33,7 @@ namespace QualifyMeProject.Repositories
         {
             db = new QualifyMeDatabaseDbContext();
         }
-        public void InsertCourse(Course c)
+        public void AddCourse(Course c)
         {
             db.Courses.Add(c);
             db.SaveChanges();
@@ -44,8 +44,8 @@ namespace QualifyMeProject.Repositories
             Course co = db.Courses.Where(temp => temp.CourseID == c.CourseID).FirstOrDefault();
             if (co != null)
             {
-                co.CourseDepartment = c.CourseDepartment;
-                co.CourseSpecification = c.CourseSpecification;
+                co.DepartmentName = c.DepartmentName;
+                co.CourseName = c.CourseName;
                 db.SaveChanges();
 
             }
@@ -64,7 +64,7 @@ namespace QualifyMeProject.Repositories
 
         public List<Course> GetCourses()
         {
-            List<Course> co = db.Courses.OrderByDescending(temp => temp.CourseDepartment).ToList();
+            List<Course> co = db.Courses.OrderByDescending(temp => temp.CourseName).ToList();
             return co;
         }
 
@@ -74,15 +74,15 @@ namespace QualifyMeProject.Repositories
             return cid;
         }
 
-        public List<Course> GetCoursesByCourseID(int CourseID)
+        public List<Course> GetCoursesByCourseName(string CourseName)
         {
-            List<Course> co = db.Courses.Where(temp => temp.CourseID == CourseID).ToList();
+            List<Course> co = db.Courses.Where(temp => temp.CourseName == CourseName).ToList();
             return co;
         }
 
-        public List<Course> GetCoursesBySpecification(string CourseSpecification)
+        public List<Course> GetCoursesByDepartmentName(string DepartmentName)
         {
-            List<Course> co = db.Courses.Where(temp => temp.CourseSpecification == CourseSpecification ).OrderByDescending(temp => temp.CourseSpecification).ToList();
+            List<Course> co = db.Courses.Where(temp => temp.DepartmentName == DepartmentName ).OrderByDescending(temp => temp.DepartmentName).ToList();
             return co;
         }
 

@@ -1,7 +1,7 @@
-﻿@model List<QualifyMeProject.ViewModels.CourseViewModel>
+﻿@model List<QualifyMeProject.ViewModels.DepartmentViewModel>
 
 @{
-    ViewBag.Title = "Courses";
+    ViewBag.Title = "Departments";
 
 }
 
@@ -11,32 +11,32 @@
 
         <h4>List of Departments</h4>
         <ul class="list-group list-group-flush">
-            
+
             <table class="table table-striped table-hover">
                 <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Department</th>
-                    <th>Specification</th>
-                </tr>
+                    <tr>
+                        <th>ID</th>
+                        <th>Department</th>
+                        
+                    </tr>
                 </thead>
                 @foreach (var item in Model)
                 {
                     <tbody>
-                    <tr>
-                        <td>@item.CourseID</td>
-                        <td>@item.DepartmentName</td>
-                        <td>@item.CourseName</td>
-                    </tr>
+                        <tr>
+                            <td>@item.DeptID</td>
+                            <td>@item.DepartmentName</td>
+                           
+                        </tr>
                     </tbody>
                 }
             </table>
         </ul>
 
-      
+
         @if (Session["CurrentCompanyName"] != null)
         {
-            <a href="/company/department/adddepartment" class="btn btn-primary">Add Department</a>
+            <a href="/company/departments/adddepartment" class="btn btn-primary">Add Department</a>
         }
 
     </div>

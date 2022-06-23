@@ -12,11 +12,11 @@ namespace QualifyMeProject.ViewModels
 
         [Required]
         [RegularExpression(@"^[a-zA-Z ]*$")]
-        public string CourseDepartment { get; set; }
+        public string DepartmentName { get; set; }
 
         [RegularExpression(@"^[a-zA-Z ]*$")]
         [Required]
-        public string CourseSpecification { get; set; }
+        public string CourseName { get; set; }
     }
 }
 

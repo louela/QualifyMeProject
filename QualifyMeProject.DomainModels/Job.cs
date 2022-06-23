@@ -15,10 +15,16 @@ namespace QualifyMeProject.DomainModels
         public int JobID { get; set; }
         public int CompanyID { get; set; }
         public int CourseID { get; set; }
-        public string CompanyName { get; set; }
+      
         public string JobTitle { get; set; }
         public string JobDescription { get; set; }
-        
-     
+
+        [ForeignKey("CompanyID")]
+        public virtual CompanyUser CompanyUser { get; set; }
+
+        [ForeignKey("CourseID")]
+        public virtual Course Course { get; set; }
+
+
     }
 }
