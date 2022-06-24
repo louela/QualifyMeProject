@@ -1,45 +1,35 @@
 ﻿@model List<QualifyMeProject.ViewModels.DepartmentViewModel>
-
 @{
     ViewBag.Title = "Departments";
-
 }
-
-
 <div class="row">
     <div class="col-sm-12">
-
         <h4>List of Departments</h4>
-
         <ul class="list-group list-group-flush">
-
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
-
+                    <th>ID</th>
                     <th>Department</th>
-
                 </tr>
                 </thead>
                 @foreach (var item in Model)
                 {
-
-                    Html.RenderPartial("Department", item);
-
+                    <tbody>
+                    <tr>
+                        <td>@item.DeptID</td>
+                        <td>@item.DepartmentName</td>
+                    </tr>
+                    </tbody>
                 }
             </table>
         </ul>
 
-        
-        @if (Session["CurrentCompanyName"] != null)
+        @if (Session["CurrentUserName"] != null)
         {
-            <a href="/company/departments/adddepartment" class="btn btn-primary">Add Department</a>
+           
+            <a href="/admin/departments/adddepartment" class="btn btn-primary">Add Department</a>
         }
-
 
     </div>
 </div>
-
-<script>
-    //   $("a[href='/home/questions']").attr("id", "active");
-</script>

@@ -15,7 +15,7 @@ namespace QualifyMeProject.DomainModels
         public int CourseID { get; set; }
        
         public int DeptID { get; set; }
-        public string DepartmentName { get; set; }
+      
         public string CourseName { get; set; }
 
 

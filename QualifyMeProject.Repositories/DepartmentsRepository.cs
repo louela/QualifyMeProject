@@ -19,6 +19,8 @@ namespace QualifyMeProject.Repositories
 
 
 
+
+
     }
     public class DepartmentsRepository : IDepartmentsRepository
     {

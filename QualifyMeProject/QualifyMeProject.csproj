@@ -214,6 +214,10 @@
     <Content Include="Areas\Company\Views\Jobs\JobListings.cshtml" />
     <Content Include="Areas\Company\Views\Jobs\AddJob.cshtml" />
     <Content Include="Areas\Company\Views\Home\Departments.cshtml" />
+    <Content Include="Areas\Company\Views\Shared\Department.cshtml" />
+    <Content Include="Areas\Company\Views\Departments\View.cshtml" />
+    <Content Include="Areas\Company\Views\Departments\AddDepartment.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Departments.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -237,6 +241,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\CompaniesController.cs" />
     <Compile Include="Areas\Admin\Controllers\CoursesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DepartmentsController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Company\CompanyAreaRegistration.cs" />
     <Compile Include="Areas\Company\Controllers\AccountController.cs" />
@@ -291,8 +296,8 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Account\" />
     <Folder Include="Areas\Admin\Views\Default\" />
+    <Folder Include="Areas\Admin\Views\Departments\" />
     <Folder Include="Areas\Company\Data\" />
-    <Folder Include="Areas\Company\Views\Departments\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

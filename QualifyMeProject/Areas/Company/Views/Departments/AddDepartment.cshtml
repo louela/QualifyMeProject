@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Add Department";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <h1>Add Department</h1>
+        <form novalidate="novalidate" action="/company/departments/adddepartment" method="post" class="needs-validation">
+            @Html.AntiForgeryToken()
+            <div class="form-row">
+            <div class="form-group col-sm-6">
+                <label for="Department">Department</label>
+                <input type="text" class="form-control" id="Department" placeholder="Enter  Department" name="Department" required="required" pattern="^[a-zA-Z ]*$" autofocus="autofocus" />
+                <div class="valid-feedback">
+                    Looks Good!
+                </div>
+                <div class="invalid-feedback">
+                    Please Enter the Department.
+                </div>
+            </div>
+            
+                
+           </div>
+
+           
+
+            <button type="submit" class="btn btn-primary">Add Department</button>
+
+        </form>
+    </div>
+</div>

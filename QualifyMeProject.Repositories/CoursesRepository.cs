@@ -19,8 +19,8 @@ namespace QualifyMeProject.Repositories
         List<Course> GetCourses();
         int GetLatestCourseID();
         List<Course> GetCoursesByCourseName(string CourseName);
-        List<Course> GetCoursesByDepartmentName(string DepartmentName);
 
+        List<Course> GetCoursesByDepartmentID(int DeptID);
 
 
     }
@@ -44,7 +44,7 @@ namespace QualifyMeProject.Repositories
             Course co = db.Courses.Where(temp => temp.CourseID == c.CourseID).FirstOrDefault();
             if (co != null)
             {
-                co.DepartmentName = c.DepartmentName;
+                
                 co.CourseName = c.CourseName;
                 db.SaveChanges();
 
@@ -80,12 +80,10 @@ namespace QualifyMeProject.Repositories
             return co;
         }
 
-        public List<Course> GetCoursesByDepartmentName(string DepartmentName)
+        public List<Course> GetCoursesByDepartmentID(int DeptID)
         {
-            List<Course> co = db.Courses.Where(temp => temp.DepartmentName == DepartmentName ).OrderByDescending(temp => temp.DepartmentName).ToList();
+            List<Course> co = db.Courses.Where(temp => temp.DeptID == DeptID).ToList();
             return co;
         }
-
-
     }
 }

@@ -14,12 +14,14 @@ namespace QualifyMeProject.Areas.Admin.Controllers
         private IUsersService us;
         private ICompanyUsersService cs;
         private ICoursesService cos;
+        private IDepartmentsService ds;
 
-        public HomeController(IUsersService us, ICompanyUsersService cs, ICoursesService cos)
+        public HomeController(IUsersService us, ICompanyUsersService cs, ICoursesService cos, IDepartmentsService ds)
         {
             this.us = us;
             this.cs = cs;
             this.cos = cos;
+            this.ds = ds;
            
         }
      
@@ -93,12 +95,13 @@ namespace QualifyMeProject.Areas.Admin.Controllers
 
         }
 
-        public ActionResult Courses()
+        public ActionResult Departments()
         {
 
-            List<CourseViewModel> cvm = this.cos.GetCourses().Take(10).ToList();
-            return View(cvm);
+            List<DepartmentViewModel> dvm = this.ds.GetDepartments().Take(10).ToList();
+            return View(dvm);
 
+        
         }
 
         public ActionResult Logout()
