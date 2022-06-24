@@ -1,0 +1,41 @@
+﻿@model List<QualifyMeProject.ViewModels.DepartmentViewModel>
+@{
+    ViewBag.Title = "Departments";
+}
+
+
+<div class="row">
+    <div class="col-sm-12">
+
+        <h4>List of Departments</h4>
+        <ul class="list-group list-group-flush">
+
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Department</th>
+
+                    </tr>
+                </thead>
+                @foreach (var item in Model)
+                {
+                    <tbody>
+                        <tr>
+                            <td>@item.DeptID</td>
+                            <td>@item.DepartmentName</td>
+
+                        </tr>
+                    </tbody>
+                }
+            </table>
+        </ul>
+
+
+        @if (Session["CurrentUserName"] != null)
+        {
+            <a href="/Admin/Departments/AddDepartment" class="btn btn-primary">Add Department</a>
+        }
+
+    </div>
+</div>

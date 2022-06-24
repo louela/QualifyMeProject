@@ -46,3 +46,6 @@ C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.Repositories\obj\Debu
 C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.Repositories\bin\Debug\QualifyMeProject.ViewModels.dll
 C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.Repositories\bin\Debug\QualifyMeProject.ViewModels.pdb
 C:\src\projects\Github's\QualifyMeProject\QualifyMeProject.Repositories\bin\Debug\QualifyMeProject.ViewModels.dll.config
+C:\Users\II\Documents\mvc\CAPSTONE\QualifyMeProject\QualifyMeProject.Repositories\bin\Debug\QualifyMeProject.ViewModels.dll
+C:\Users\II\Documents\mvc\CAPSTONE\QualifyMeProject\QualifyMeProject.Repositories\bin\Debug\QualifyMeProject.ViewModels.pdb
+C:\Users\II\Documents\mvc\CAPSTONE\QualifyMeProject\QualifyMeProject.Repositories\bin\Debug\QualifyMeProject.ViewModels.dll.config
