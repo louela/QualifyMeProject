@@ -214,6 +214,8 @@
     <Content Include="Areas\Company\Views\Jobs\JobListings.cshtml" />
     <Content Include="Areas\Company\Views\Jobs\AddJob.cshtml" />
     <Content Include="Areas\Company\Views\Home\Departments.cshtml" />
+    <Content Include="Areas\Admin\Views\Departments\AddDepartment.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Departments.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -237,6 +239,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\CompaniesController.cs" />
     <Compile Include="Areas\Admin\Controllers\CoursesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DepartmentsController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Company\CompanyAreaRegistration.cs" />
     <Compile Include="Areas\Company\Controllers\AccountController.cs" />
